@@ -8,3 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+header{padding: 0 .5em;}
+main#buttons{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em .5em;
+  padding: .5em;
+  justify-content: space-around;
+}
