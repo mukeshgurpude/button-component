@@ -14,9 +14,8 @@
   --clr-over: var(--clr);
   --scale: scale(1);
   
-  padding: .4em 1em;
+  padding: 6.4px 16px;
   width: fit-content;
-  /* margin: .5em 1em; */
   border-radius: 5px;
   display: flex;
   align-items: center;

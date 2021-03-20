@@ -81,7 +81,7 @@ const buttons = [
   { width: .5, title: '<Button disableShadow />', props: {disableShadow: true}, name: 'No Shadow', },
   { width: .5, title: '<Button disabled />', props: {disabled: true}, name: 'Disabled', },
   { width: .5, title: '<Button variant="text" disabled />', props: {disabled: true, variant: 'text'}, name: 'Disabled Text', },
-  { width: .5, title: '<Button startIcon="local_grocery_store" />', props: {startIcon: 'local_grocery_store'}, name: 'Start Icon', },
+  { width: .5, title: '<Button startIcon="account_circle" />', props: {startIcon: 'account_circle'}, name: 'Start Icon', },
   { width: .5, title: '<Button endIcon="local_grocery_store" />', props: {endIcon: 'local_grocery_store'}, name: 'End Icon', },
   { width: .33, title: '<Button size="sm" />', props: {size: 'sm'}, name: 'Small size', },
   { width: .33, title: '<Button size="md" />', props: {size: 'md'}, name: 'Normal Size', },
