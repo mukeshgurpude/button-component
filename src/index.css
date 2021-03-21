@@ -9,7 +9,7 @@ body {
   color: #fff;
 }
 
-a{font-size: 16px; text-decoration: none;color: #aaf; border-bottom: 2px outset #a00;}
+a{font-size: 16px; text-decoration: none;color: #99f; border-bottom: 2px outset #fff;}
 
 header{padding: 0 1em; display: flex; justify-content: space-between; align-items: center;}
 main#buttons{
