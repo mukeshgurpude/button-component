@@ -5,10 +5,13 @@ body {
   font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(0, 5%, 13%);
+  background-color: hsl(0, 3%, 21%);
   color: #fff;
 }
-header{padding: 0 1em;}
+
+a{font-size: 16px; text-decoration: none;color: #aaf; border-bottom: 2px outset #a00;}
+
+header{padding: 0 1em; display: flex; justify-content: space-between; align-items: center;}
 main#buttons{
   display: flex;
   flex-flow: row wrap;
@@ -30,6 +33,11 @@ aside#fullNav{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column;
+  gap: 1em;
 }
 #close{position: absolute; top: 1em;right: 1em;font-size: 2em;cursor: pointer;}
 aside#fullNav .wrapper{transform: scale(1.5);}
+
+h1{font-size: 1.5em;}
+h2{font-size: 1.1em;}

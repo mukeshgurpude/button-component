@@ -10,7 +10,7 @@ const variants = {
   default: {
     '--bg': 'rgba(224, 224, 224, 1)',
     '--clr': '#000',
-    '--clr-over': '#fff',
+    '--clr-over': '#111',
     '--outline': 'none',
     '--bg-over': 'rgba(174, 174, 174, 1)'
   },
@@ -24,7 +24,7 @@ const variants = {
   },
   text: {
     '--bg': 'transparent',
-    '--clr': 'rgba(61, 90, 254, 1)',
+    '--clr': '#A4B2FE',
     '--outline': 'none',
     '--bg-over': 'rgba(41, 98, 200, 0.1)'
   },
@@ -39,9 +39,10 @@ const sizes = {
 
 // Styles for disabled button
 const disabled = {
-  color: '#777',
+  color: '#d1d1d1',
   cursor: 'no-drop',
-  '--bg': '#aaa',
+  // '--clr-over': '#777',
+  '--bg': 'rgba(136, 136, 136, .2)',
   '--bg-over': 'rgba(41, 98, 255, 0.1)'
 }
 
@@ -73,16 +74,16 @@ const colors = {
   },
 }
 
-// Button layout, with properties
+// Button layout, with properties For button display UI
 const buttons = [
-  { width: .5, title: '<Button />', props: {variant: 'default'}, name: 'Button', },
+  { width: .5, title: '<Button variant="default" />', props: {variant: 'default'}, name: 'Button', },
   { width: .5, title: '<Button variant="outline" />', props: {variant: 'outline'}, name: 'Outlined Button', },
   { width: .5, title: '<Button variant="text" />', props: {variant: 'text'}, name: 'Text Button', },
   { width: .5, title: '<Button disableShadow />', props: {disableShadow: true}, name: 'No Shadow', },
   { width: .5, title: '<Button disabled />', props: {disabled: true}, name: 'Disabled', },
   { width: .5, title: '<Button variant="text" disabled />', props: {disabled: true, variant: 'text'}, name: 'Disabled Text', },
-  { width: .5, title: '<Button startIcon="account_circle" />', props: {startIcon: 'account_circle'}, name: 'Start Icon', },
-  { width: .5, title: '<Button endIcon="local_grocery_store" />', props: {endIcon: 'local_grocery_store'}, name: 'End Icon', },
+  { width: .5, title: '<Button startIcon= "account_circle" />', props: {startIcon: 'account_circle'}, name: 'Start Icon', },
+  { width: .5, title: '<Button endIcon= "local_grocery_store" />', props: {endIcon: 'local_grocery_store'}, name: 'End Icon', },
   { width: .33, title: '<Button size="sm" />', props: {size: 'sm'}, name: 'Small size', },
   { width: .33, title: '<Button size="md" />', props: {size: 'md'}, name: 'Normal Size', },
   { width: .33, title: '<Button size="lg" />', props: {size: 'lg'}, name: 'Large size', },
