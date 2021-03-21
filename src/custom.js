@@ -6,8 +6,13 @@ export default class Custom extends React.Component{
   constructor(){
     super();
     this.state = JSON.parse(localStorage.getItem('customButtonConf')) || {};
+    this.startIcon = this.state.startIcon || '';
+    this.endIcon = this.state.endIcon || '';
+
     this.dropdownSelect = this.dropdownSelect.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.toggleIcon = this.toggleIcon.bind(this);
+    this.controlIconText = this.controlIconText.bind(this);
   }
 
   dropdownSelect(e){
@@ -23,15 +28,40 @@ export default class Custom extends React.Component{
     this.setState(s=>({
       ...s,
       [e.target.name]: val,
-    }))
+    }));
+  }
+
+  toggleIcon(e){
+    const pos = e.target.name;
+    if(!this[pos]){
+      document.querySelector(`input[data-pos=${pos}]`).focus()
+      return;
+    }
+    if(this.state[pos]) this.setState(s=>({...s, [pos]: ''}));
+    else this.setState(s=>({...s, [pos]: this[pos]}));
+  }
+
+  controlIconText(e){
+    const pos = e.target.dataset.pos;
+    this[pos] = e.target.value;
+    if(this.state[pos]){
+      this.setState(s=>({...s, [pos]: this[pos]}))
+    };
   }
 
   componentWillUnmount(){
     localStorage.setItem('customButtonConf', JSON.stringify(this.state));
   }
 
+  componentDidMount(){
+    document.querySelectorAll('input[data-pos').forEach(i=>{
+      i.value = this[i.dataset.pos];
+    })
+  }
+
   render(){
-    return <main>
+    return <>
+      <aside>
       <form id="controls" onSubmit={function(e){e.preventDefault()}}>
         <fieldset>
           <legend>Options</legend>
@@ -70,8 +100,32 @@ export default class Custom extends React.Component{
           <label><input type="radio" name="size" value="lg" onChange={this.toggle} checked={this.state.size === 'lg'}/>Large</label>
         </fieldset>
 
+        <fieldset>
+          <legend>Icons</legend>
+          <span className="material-icons" title="Reference for icon codes, can be found at https://material.io/icons">info</span>
+          <label>
+            <input type="checkbox" name="startIcon" checked={this.state.startIcon || false} onChange={this.toggleIcon} />
+            Start 
+          </label>
+          <label>
+            Icon:
+            <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+          </label>
+          
+          <label>
+          <input type="checkbox" name="endIcon" checked={this.state.endIcon || false} onChange={this.toggleIcon} />
+            End  
+          </label>
+          <label>
+            Icon:
+            <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+          </label>
+        </fieldset>
       </form>
-      <Button {...this.state} />
-    </main>
+      </aside>
+      <main>
+        <Button {...this.state} />
+      </main>
+    </>
   }
 }
