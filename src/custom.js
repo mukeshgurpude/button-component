@@ -101,25 +101,27 @@ export default class Custom extends React.Component{
         </fieldset>
 
         <fieldset>
-          <legend>Icons</legend>
-          <span className="material-icons" title="Reference for icon codes, can be found at https://material.io/icons">info</span>
-          <label>
-            <input type="checkbox" name="startIcon" checked={this.state.startIcon || false} onChange={this.toggleIcon} />
-            Start 
-          </label>
-          <label>
-            Icon:
-            <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
-          </label>
-          
-          <label>
-          <input type="checkbox" name="endIcon" checked={this.state.endIcon || false} onChange={this.toggleIcon} />
-            End  
-          </label>
-          <label>
-            Icon:
-            <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
-          </label>
+          <legend style={{display: 'flex', alignItems: 'center'}}>Icons&nbsp;<span style={{cursor: 'pointer'}} className="material-icons" title="Reference for icon codes, can be found at https://material.io/icons">info</span></legend>
+          <div>
+            <label>
+              <input type="checkbox" name="startIcon" checked={this.state.startIcon || false} onChange={this.toggleIcon} />
+              Start 
+            </label>
+            <label>
+              Icon:
+              <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+            </label>
+          </div>
+          <div>
+            <label>
+            <input type="checkbox" name="endIcon" checked={this.state.endIcon || false} onChange={this.toggleIcon} />
+              End  
+            </label>
+            <label>
+              Icon:
+              <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+            </label>
+          </div>
         </fieldset>
       </form>
       </aside>

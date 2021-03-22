@@ -1,0 +1,26 @@
+#root{min-height: 100vh;display: grid;grid-template-rows: repeat(2, max-content) 1fr;}
+form#controls{
+  background-color: rgba(255, 255, 255, .1);
+  display: flex;
+  flex-flow: column;
+  padding: 0 .5em;
+  gap: 1em 0;
+}
+
+form#controls>fieldset{
+  display: flex;
+  justify-content: space-around;
+}
+main{display: flex; justify-content: center; align-items: center;}
+
+@media screen and (min-width: 642px){
+  #root{
+    grid-template-areas: 'header header header' 'form custom custom';
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-template-rows: max-content 1fr;
+    padding: 0 1em;
+  }
+  header{grid-area: header}
+  main{grid-area: custom;}
+}
