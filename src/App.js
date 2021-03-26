@@ -43,6 +43,7 @@ class App extends React.Component{
         <Switch>
           <Route path="/custom" component={Custom} />
           <Route path="/">
+            {document.body.classList.remove('custom')}
             <main id="buttons">
             {
               buttons.map((b, i)=>{
@@ -61,6 +62,9 @@ class App extends React.Component{
             }
           </Route>
         </Switch>
+        <footer>
+          <p>Created by <a href="https://devchallenges.io/portfolio/mukeshgurpude">mukeshgurpude-devChallenges.io</a></p>
+        </footer>
       </Router>
     </>
   }

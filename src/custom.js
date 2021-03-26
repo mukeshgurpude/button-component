@@ -60,6 +60,7 @@ export default class Custom extends React.Component{
   }
 
   render(){
+    document.body.classList.add('custom');
     return <>
       <aside>
       <form id="controls" onSubmit={function(e){e.preventDefault()}}>

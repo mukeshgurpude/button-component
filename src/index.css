@@ -5,13 +5,14 @@ body {
   font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(0, 3%, 21%);
+  background-color: hsl(249deg, 27%, 14%);
   color: #fff;
 }
 
 a{font-size: 16px; text-decoration: none;color: #99f; border-bottom: 2px outset #fff;}
 
-header{padding: 0 1em; display: flex; justify-content: space-between; align-items: center;}
+header{padding: 0 1em; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid rgba(200, 200, 200); margin-bottom: .5em;}
+
 main#buttons{
   display: flex;
   flex-flow: row wrap;
@@ -41,3 +42,5 @@ aside#fullNav .wrapper{transform: scale(1.5);}
 
 h1{font-size: 1.5em;}
 h2{font-size: 1.1em;}
+
+footer{text-align: center; border-top: 2px solid rgba(200, 200, 200); margin-top: .5em;}
