@@ -110,7 +110,7 @@ export default class Custom extends React.Component{
             </label>
             <label>
               Icon:
-              <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+              <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here, eg: shop" />
             </label>
           </div>
           <div>
@@ -120,7 +120,7 @@ export default class Custom extends React.Component{
             </label>
             <label>
               Icon:
-              <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here" />
+              <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here, eg: ping" />
             </label>
           </div>
         </fieldset>
