@@ -54,10 +54,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/mukeshgurpude/button-component.git
 
 # Install dependencies
-$ npm install
+$ yarn install
 
 # Run the app
-$ npm start
+$ yarn start
 ```
 
 ## Acknowledgements

@@ -63,7 +63,7 @@ class App extends React.Component{
           </Route>
         </Switch>
         <footer>
-          <p>Created by <a href="https://devchallenges.io/portfolio/mukeshgurpude">mukeshgurpude-devChallenges.io</a></p>
+          <p>Created by <a href="https://devchallenges.io/portfolio/mukeshgurpude">mukeshgurpude</a>@<a href="https://devchallenges.io">devChallenges.io</a></p>
         </footer>
       </Router>
     </>
