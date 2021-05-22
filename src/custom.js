@@ -109,8 +109,7 @@ export default class Custom extends React.Component{
               Start 
             </label>
             <label>
-              Icon:
-              <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here, eg: store" />
+              Icon: <input data-pos="startIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here, eg: store" />
             </label>
           </div>
           <div>
@@ -119,7 +118,7 @@ export default class Custom extends React.Component{
               End  
             </label>
             <label>
-              Icon:
+              Icon: 
               <input data-pos="endIcon" type="text" onChange={this.controlIconText} placeholder="icon alias here, eg: pin" />
             </label>
           </div>
